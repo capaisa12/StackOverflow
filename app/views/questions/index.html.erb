@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>LISTADO DE PREGUNTAS</h1>
+      <table class="table">
+        <tr>
+          <th>Titulo</th>
+          <th>Descripcion</th>
+          <th>Fecha</th>
+          <th>Email</th>
+          <th>No. Respuestas</th>
+          <th>No. Votos</th>
+        </tr>
+        <% @questions.each do |q| %>
+        <tr>
+          <td><%= q.title %></td>
+          <td><%= q.description %></td>
+          <td><%= q.fecha %></td>
+          <td><%= q.email %></td>
+          <td><%= q.NoAnswer %></td>
+          <td><%= q.NoVotos %></td>
+        </tr>
+        <% end %>
+      </table>
+      <div class="text-right">
+        <%= link_to "Realizar Pregunta", new_questions_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
