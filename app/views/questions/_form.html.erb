@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1><%= form_title%></h1>
+      <%= form_for @questions do |q| %>
+      <div class="form-group">
+        <%= q.text_field :title, class:"form-control input-lg", placeholder:"Titulo de la pregunta" %>
+      </div>
+      <div class="form-group">
+        <%= q.text_area :description, class:"form-control input-lg", placeholder:"Ingrese la pregunta" %>
+      </div>
+      <div class="form-group">
+        <%= q.date_field :fecha, class:"form-control input-lg", placeholder:"Ingrese Fecha" %>
+      </div>
+      <div class="form-group">
+        <%= q.email_field :email, class:"form-control input-lg", placeholder:"Ingrese su correo" %>
+      </div>
+      <div class="form-group">
+        <%= q.text_field :NoAnswer, class:"form-control input-lg", placeholder:"Ingrese el numero de respuestas" %>
+      </div>
+      <div class="form-group">
+        <%= q.text_field :NoVotos, class:"form-control input-lg", placeholder:"Ingrese el numero de votos" %>
+      </div>
+      <div class="form-group">
+        <%= q.submit form_title, class: "btn btn-prymary btn-lg btn-block" %>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>
