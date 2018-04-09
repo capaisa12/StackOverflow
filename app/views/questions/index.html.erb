@@ -13,8 +13,8 @@
         </tr>
         <% @questions.each do |q| %>
         <tr>
-          <td><%= q.title %></td>
-          <td><%= q.description %></td>
+          <td><%= link_to q.title, q %></td>
+          <td><%= link_to q.description, q %></td>
           <td><%= q.fecha %></td>
           <td><%= q.email %></td>
           <td><%= q.NoAnswer %></td>
