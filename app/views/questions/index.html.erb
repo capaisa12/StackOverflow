@@ -19,6 +19,7 @@
           <td><%= q.email %></td>
           <td><%= q.NoAnswer %></td>
           <td><%= q.NoVotos %></td>
+          <td><%= link_to "Editar", edit_question_path(q) %></td>
         </tr>
         <% end %>
       </table>
