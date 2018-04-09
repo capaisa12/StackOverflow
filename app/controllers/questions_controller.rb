@@ -17,6 +17,11 @@ def create
   end
 end
 
+
+def show
+  @questions = Question.find(params[:id])
+end
+
 private
 
 def questions_params
