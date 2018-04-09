@@ -25,6 +25,15 @@ def edit
   @questions = Question.find(params[:id])
 end
 
+def update
+  @questions = Question.find(params[:id])
+  if @questions.update(questions_params)
+    redirect_to question_path, notice: "la pregunta se modifico de forma exitosa"
+  else
+    render :edit
+  end
+end
+
 private
 
 def questions_params
